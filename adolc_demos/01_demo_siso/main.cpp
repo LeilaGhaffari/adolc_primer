@@ -6,7 +6,6 @@
 //
 // ------------------------------------------------------------------------------------------------------------------ //
 
-
 // Include libraries
 #include <iostream>
 #include <iomanip>
@@ -14,11 +13,9 @@
 #include <cmath>
 #include <adolc/adolc.h>
 
-
 // Define namespaces
 using namespace std;                // cout, endl
 using namespace std::chrono;        // nanoseconds, system_clock, seconds
-
 
 // Define the function to be differentiated: f(x) = e^x
 adouble my_function(adouble x) {
@@ -26,9 +23,7 @@ adouble my_function(adouble x) {
     return f;
 };
 
-
 int main() {
-
 
     // -------------------------------------------------------------------------------------------------------------- //
     // Initialize problem variables
@@ -42,8 +37,6 @@ int main() {
     // Initialize active variables
     auto x = new adouble[n];
     auto y = new adouble[m];
-
-
 
     // -------------------------------------------------------------------------------------------------------------- //
     // Active section for automatic differentiation
@@ -69,8 +62,6 @@ int main() {
     y[0] >>= yp[0];
 
     trace_off();    // End of the active section
-
-
 
     // -------------------------------------------------------------------------------------------------------------- //
     // Compute the first derivative (forward mode)
@@ -103,8 +94,6 @@ int main() {
     cout << "The elapsed time was " << elapsed_seconds*1000 << " milliseconds" << endl;
     cout << endl << endl;
 
-
-
     // -------------------------------------------------------------------------------------------------------------- //
     // Compute the first derivative (reverse mode)
     // -------------------------------------------------------------------------------------------------------------- //
@@ -132,8 +121,5 @@ int main() {
     cout << endl << endl;
     cout << endl;
 
-
     return 0;
-
-
 }
