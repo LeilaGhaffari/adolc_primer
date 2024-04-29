@@ -22,10 +22,10 @@ set(project_name "adolc_minimal_working_example")
 project(${project_name})
 
 # Set path to header files directories
-include_directories("$ENV{ADOLC_INCLUDE}")
+include_directories($ENV{ADOLC_INCLUDE})
 
 # Set path to executable directories
-link_directories("$ENV{ADOLC_LIB}")
+link_directories($ENV{ADOLC_LIB})
 
 # Add source files to compile to the project
 add_executable(${project_name} main.cpp)
