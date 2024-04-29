@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 # Set project name
-set(project_name "demo_mimo_vector")
+set(project_name "demo_miso_scalar")
 project(${project_name})
 
 # Set path to header files directories
